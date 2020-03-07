@@ -1,0 +1,58 @@
+\documentclass[a4paper,11pt]{dinbrief} 
+\usepackage[utf8]{inputenc}
+\usepackage[greek.polutoniko, ngerman]{babel}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\setlength{\headheight}{1.1\baselineskip}
+\usepackage{scrdate}
+\usepackage{footnote}
+\usepackage{scrlayer-scrpage}
+\setlength{\headsep}{10mm}
+\pagestyle{scrheadings}
+\pagenumbering{gobble}
+\hyphenation{ Office }
+\begin{document}
+\subject{ {{ bezeichnung }} }
+\backaddress{ANDREAS ABSENDER,
+  ABSENDERSTRASSE 1,
+  00000 AACHEN
+} 
+\signature{ANDREAS GRELL} 
+\Datum{\todaysname, \today} 
+\address{ANDREAS ABSENDER \\
+  HISPANIST, GERMANIST, SOFTWAREENTWICKLER \\
+  ABSENDERSTRASSE 1 \\
+  00000 AACHEN} 
+\begin{letter}
+    { {{ firma|safe }} \\
+    {% if anrede == 'Herr' %}
+      z.Hd. {{- ' ' + anrede }}n {{- ' ' + ansprechpartner }} \\
+    {% endif %}
+    {% if anrede == 'Frau' %}
+      z.Hd.{{- ' ' + anrede }} {{- ' ' + ansprechpartner }} \\
+    {% endif %}
+    {{ strasse }} \\ 
+    {{ ort }} }
+    % Dies ist übrigens ein Befehl: \begin{letter}{Adresse}
+    {% if anrede == 'Herr' %}
+      \opening{ Sehr geehrter {{- ' ' + anrede }} {{- ' ' + ansprechpartner }},}
+    {% elif anrede == 'Frau' %}
+      \opening{ Sehr geehrte {{- ' ' + anrede }} {{- ' ' + ansprechpartner }},}
+    {% else %}
+      \opening{ Sehr geehrte Damen und Herren, }
+    {% endif %}      
+
+      durch {{ quelle }} auf Ihr Stellenangebot \enquote{ {{- bezeichnung -}} } aufmerksam
+      geworden, möchte ich gern mehr über die Position erfahren.
+      
+
+
+      Sollte Ihnen mein hier freilich nur grob umrissenes Profil ebenso zusagen wie mir Ihr Stellenangebot,
+      so würde ich mich freuen, Sie und Ihr Unternehmen bei einem unverbindlichen Gespräch näher kennen
+      lernen zu dürfen, und verbleibe
+
+
+\closing{mit freundlichen Grüßen}
+\par
+\encl{Lebenslauf und Zeugnisse} 
+\end{letter} 
+\end{document} 

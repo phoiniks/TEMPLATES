@@ -1,0 +1,58 @@
+\documentclass[a4paper,11pt]{dinbrief} 
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\setlength{\headheight}{1.1\baselineskip}
+\usepackage{scrdate}
+\usepackage{footnote}
+\usepackage{scrlayer-scrpage}
+\setlength{\headsep}{10mm}
+\pagestyle{scrheadings}
+\pagenumbering{gobble}
+\hyphenation{Office Pro-gram-mie-rer Bash-Kennt-nis-sen Hi-ber-nate}
+\begin{document}
+\subject{ {{ bezeichnung }} }
+\backaddress{ANDREAS ABSENDER,
+  ABSENDERSTRASSE 1,
+  00000 AACHEN
+} 
+\signature{ANDREAS ABSENDER} 
+\Datum{\todaysname, \today} 
+\address{ANDREAS ABSENDER \\
+  SOFTWAREENTWICKLER, HISPANIST, GERMANIST \\
+  ABSENDERSTRASSE 1 \\
+  00000 AACHEN} 
+\begin{letter}
+    { {{ firma|safe }} \\
+    {% if anrede == 'Herr' %}
+      z.Hd. {{- ' ' + anrede }}n {{- ' ' + ansprechpartner }} \\
+    {% endif %}
+    {% if anrede == 'Frau' %}
+      z.Hd.{{- ' ' + anrede }} {{- ' ' + ansprechpartner }} \\
+    {% endif %}
+    {{ strasse }} \\ 
+    {{ ort }} }
+    % Dies ist übrigens ein Befehl: \begin{letter}{Adresse}
+    {% if anrede == 'Herr' %}
+      \opening{ Sehr geehrter {{- ' ' + anrede }} {{- ' ' + ansprechpartner }},}
+    {% elif anrede == 'Frau' %}
+      \opening{ Sehr geehrte {{- ' ' + anrede }} {{- ' ' + ansprechpartner }},}
+    {% else %}
+      \opening{ Sehr geehrte Damen und Herren, }
+    {% endif %}
+      durch {{ quelle }} auf Ihr Stellenangebot aufmerksam geworden, möchte ich mich nach einer unlängst absolvierten
+      Zusatzqualifikation als Java-Programmierer mit dem vorliegenden Anschreiben bei Ihnen auf die Position
+      \enquote{ {{- bezeichnung -}} } bewerben.
+      
+
+      Unter meinem vor kurzem neu eingerichteten Github-Account https://github.com/phoiniks können Sie in Projekten entstandene
+      Codeschnipsel besichtigen. Sollten Ihnen mein hier freilich nur grob umrissenes Profil und das erwähnte Softwarematerial
+      ebenso zusagen  wie mir Ihr Stellenangebot, so würde ich mich freuen, Sie und Ihr Unternehmen bei einem persönlichen
+      Gespräch näher kennen zu lernen sowie mehr über die angebotene Position zu erfahren. Bis dahin verbleibe ich
+
+
+\closing{mit freundlichen Grüßen}
+\par
+\encl{Lebenslauf und Zeugnisse} 
+\end{letter} 
+\end{document} 
