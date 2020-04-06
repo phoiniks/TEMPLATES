@@ -12,16 +12,16 @@
 \hyphenation{Office Pro-gram-mie-rer Bash-Kennt-nis-sen}
 \begin{document}
 \subject{ [% bezeichnung %] }
-\backaddress{Andreas Grell,
-  Kühnehöfe 25,
-  D-22761 Hamburg
+\backaddress{Adalbert Absender,
+  Bohnengasse 1,
+  00000 Aix-la-Chapelle
 } 
-\signature{Andreas Grell} 
+\signature{Adalbert Absender} 
 \Datum{\todaysname, \today} 
-\address{Andreas Grell \\
-  Softwareentwickler, Hispanist, Germanist \\
-  Kühnehöfe 25 \\
-  D-22761 Hamburg} 
+\address{Adalbert Absender \\
+  Staatlich geprüfter Erbsenzähler \\
+  Bohnengasse 1 \\
+  00000 Aix-la-Chapelle} 
 \begin{letter}
    {
     [% firma %] \\
